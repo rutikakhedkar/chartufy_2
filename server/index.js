@@ -18,7 +18,7 @@ const io = require('socket.io')(server, {
 app.use(express.json());
 app.use(cors({
   origin: `https://chartufy-2.vercel.app`, // Add allowed origin
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Include all necessary methods
+  methods: ['GET', 'POST'], // Include all necessary methods
   credentials: true // Allow credentials like cookies
 }));
 
