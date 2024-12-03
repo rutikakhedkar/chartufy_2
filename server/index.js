@@ -10,14 +10,14 @@ const cors = require("cors");
 
 const io = require('socket.io')(server, {
   cors: {
-    origin: 'http://localhost:5173', // Allow your frontend's origin
+    origin: 'https://chartufy-2.vercel.app', // Allow your frontend's origin
     methods: ['GET', 'POST'],       // Allow these HTTP methods
   },
 });
 
 app.use(express.json());
 app.use(cors({
-  origin: `http://localhost:5173`, // Add allowed origin
+  origin: `https://chartufy-2.vercel.app`, // Add allowed origin
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Include all necessary methods
   credentials: true // Allow credentials like cookies
 }));
