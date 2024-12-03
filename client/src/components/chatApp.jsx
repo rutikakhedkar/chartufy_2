@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:3000');  // Connect to backend server
+const socket = io('https://chartufy-2-ba5d.vercel.app/');  // Connect to backend server
 
 const ChatApp = () => {
   const [messages, setMessages] = useState([]);
