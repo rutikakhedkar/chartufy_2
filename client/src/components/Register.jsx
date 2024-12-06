@@ -5,7 +5,7 @@ const Register = () => {
     const [userName, setUserName] = useState('');
     const [userEmail, setUserEmail] = useState('');
     const [userPassword, setUserPassword] = useState('');
-    const [intrest,setIntrest]=useState('');
+    const [intrest, setIntrest] = useState('');
     const [currentStep, setCurrentStep] = useState(0);
 
     const userData = {
@@ -16,7 +16,7 @@ const Register = () => {
         setCurrentStep((prevStep) => prevStep + 1);
     };
 
-    const handlePrevious = ()=>{
+    const handlePrevious = () => {
         setCurrentStep((prevStep) => prevStep - 1);
     }
 
@@ -84,7 +84,7 @@ const Register = () => {
                                                                     <input
                                                                         type="checkbox"
                                                                         className="mr-2"
-                                                                        onChange={() =>setIntrest(intrest)}
+                                                                        onChange={() => setIntrest(intrest)}
                                                                     />
                                                                     {intrest}
                                                                 </label>
@@ -98,32 +98,32 @@ const Register = () => {
                                     }
                                 })()
                             }
-                             <div className="p-2 w-1/2">
+
+                            <div className="p-2 w-1/2 flex justify-between">
                                 <button
-                                    className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
-                                    onClick={handlePrevious}>
+                                    className="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                                    onClick={handlePrevious}
+                                >
                                     Previous
                                 </button>
-                            
-                            {
-                              
-                                currentStep !== 3 ? (
-                                    
-                                        <button
-                                            className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
-                                            onClick={handleNext}
-                                        >
-                                            Next
-                                        </button>
-                                    
+
+                                {currentStep !== 3 ? (
+                                    <button
+                                        className="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                                        onClick={handleNext}
+                                    >
+                                        Next
+                                    </button>
                                 ) : (
-                                        <button
-                                            className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
-                                            onClick={handleSubmit}>
-                                            Submit
-                                        </button>
-                                   )}
+                                    <button
+                                        className="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                                        onClick={handleSubmit}
+                                    >
+                                        Submit
+                                    </button>
+                                )}
                             </div>
+
                         </div>
                     </div>
                 </div>
