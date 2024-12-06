@@ -1,0 +1,6 @@
+body {
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient from left to right */
+    height: 100vh; /* Ensure the body spans the full viewport */
+    margin: 0; /* Remove default margins */
+  }
+  
